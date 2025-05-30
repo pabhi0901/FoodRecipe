@@ -10,19 +10,19 @@ const NavBar = () => {
 
       <NavLink  to = {'/'} 
       className={`navTitle`}
-      style={(e)=> {return{color:e.isActive ? "#c6da56" : ""}}}>Home</NavLink>
+      style={(e)=> {return{color:e.isActive ? "#f7cc0b" : ""}}}>Home</NavLink>
 
       <NavLink to ='/recipes' 
       className= {"navTitle"} 
-      style={(e)=> {return{color:e.isActive ? "#c6da56" : ""}}}>Recipes</NavLink>
+      style={(e)=> {return{color:e.isActive ? "#f7cc0b" : ""}}}>Recipes</NavLink>
 
-      <NavLink to ='/about'  
+      <NavLink to ='/favourites'  
       className="navTitle" 
-      style={(e)=> {return{color:e.isActive ? "#c6da56" : ""}}}>About</NavLink>
+      style={(e)=> {return{color:e.isActive ? "#f7cc0b" : ""}}}>Favourites</NavLink>
 
       <NavLink to = '/createRecipes' 
       className="navTitle createRecipeButton" 
-      style={(e)=> {return{color:e.isActive ? "#1a522f" : ""}}}>Create Recipe</NavLink>
+      style={(e)=> {return{color:e.isActive ? "#fc5f26" : ""}}}>Create Recipe</NavLink>
     </div>
   )
 }

@@ -1,5 +1,6 @@
 {
   "name": "project1",
+  "homepage": "https://pabhi0901.github.io/FoodRecipe",
   "private": true,
   "version": "0.0.0",
   "type": "module",
@@ -16,6 +17,7 @@
     "react-dom": "^19.1.0",
     "react-hook-form": "^7.56.4",
     "react-router-dom": "^7.6.0",
+    "react-toastify": "^11.0.5",
     "tailwindcss": "^4.1.7",
     "toastify": "^2.0.1"
   },

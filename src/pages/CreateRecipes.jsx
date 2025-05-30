@@ -7,10 +7,12 @@ import image1 from '../assets/delicious-food-menu-icons_24877-51636-removebg-pre
 import image3 from '../assets/240_F_1481432135_zUt4ysxIWW3zZZCTN5HpR5ePzrsNfUXJ-removebg-preview.png'
 import image4 from '../assets/meal-fast-food_1308-13808-removebg-preview.png'
 import image5 from '../assets/sliced-vegetables-realistic-concept-with-tomato-pepper-onion-vector-illustration_1284-16245-removebg-preview.png'
+import { useNavigate } from 'react-router-dom'
+import { toast } from 'react-toastify'
 
 const CreateRecipes = () => {
   let  [recipeArray, setrecipeArray] = useContext(RecipeDataContext)
- 
+  let navigate = useNavigate()
   const{register,
     handleSubmit,reset} = useForm()
   
@@ -18,6 +20,10 @@ const CreateRecipes = () => {
       data.id = nanoid()
       setrecipeArray([...recipeArray,data])  //setting the elements in the array
       reset()
+      navigate("/recipes")
+      console.log(data);
+      toast.success("Recipe added")
+      
     }
     
 
@@ -51,19 +57,19 @@ const CreateRecipes = () => {
         <textarea 
         {...register("description")}
         placeholder='Recipe Desciption'
-        rows={10}
+        rows={5}
           />
 
         <textarea 
         {...register("ingridients")}
         placeholder='Write Ingridients seperated by commas'
-         rows={10}
+         rows={5}
         />
 
           <textarea 
         {...register("instructions")}
-        placeholder='Write Instructions seperated by commas'
-          rows={10}
+        placeholder='Write Instructions seperated by fullstops "."'
+          rows={5}
         />
         
         <select {...register("category")}>
@@ -72,7 +78,7 @@ const CreateRecipes = () => {
           <option value="thai">Thai</option>
         </select>
       
-      <button>Submit</button>
+      <button>Add Recipe</button>
 <img src={image1} className='gifs image1' alt="" />
 <img src={image4} className='gifs image4' alt="" />
 <img src={image3} className='gifs image3' alt=""  />

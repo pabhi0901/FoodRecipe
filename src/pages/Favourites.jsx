@@ -1,7 +1,7 @@
 import React from 'react'
 import '../index.css'
 
-const About = () => {
+const Favourites = () => {
   return (
     <div>
       <h1>About</h1>
@@ -9,4 +9,4 @@ const About = () => {
   )
 }
 
-export default About
+export default Favourites

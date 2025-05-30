@@ -4,6 +4,7 @@ import './index.css'
 import App from './App.jsx'
 import { BrowserRouter } from 'react-router-dom'
 import RecipeContext from './Context/RecipeContext.jsx'
+import { ToastContainer } from 'react-toastify'
 
 
 createRoot(document.getElementById('root')).render(
@@ -11,6 +12,7 @@ createRoot(document.getElementById('root')).render(
    
    <BrowserRouter>
     <App />
+    <ToastContainer position = "top-right"/>
    </BrowserRouter>
 
 </RecipeContext>
